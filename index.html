@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Amr Aleraki Portfolio</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<meta name="description" content="Websites for restaurants, online stores and companies, built by Amr Aleraki. 30 projects in English, Arabic or both.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wdth,wght@12..96,75..100,400..800&family=Instrument+Sans:wght@400..700&display=swap">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="site-header" id="top">
+  <div class="wrap">
+    <a class="brand" href="#top" aria-label="Amr Aleraki, back to top">
+      <span class="brand-mark" aria-hidden="true">AA</span>
+      Amr Aleraki
+    </a>
+    <nav class="nav" aria-label="Main">
+      <a href="#work">Work</a>
+      <a href="#services">Services</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <div class="header-actions">
+      <button class="icon-btn" id="themeToggle" type="button" aria-label="Switch color theme">
+        <svg class="theme-icon-light" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
+        <svg class="theme-icon-dark" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4.5"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+      </button>
+      <a class="btn btn-primary btn-sm" href="#contact">Start a project</a>
+    </div>
+  </div>
+</header>
+
+<main>
+  <section class="hero" aria-labelledby="heroTitle">
+    <div class="wrap">
+      <div class="hero-copy">
+        <h1 id="heroTitle">Websites for restaurants, stores and growing companies.</h1>
+        <p class="hero-lede">
+          I'm <strong>Amr Aleraki</strong>, a software engineer and product manager from Egypt.
+          Below are 30 websites I've worked on, from restaurants and pet clinics in Qatar to a construction
+          company in Kuwait and a chemical plant in Saudi Arabia, in English, Arabic or both.
+        </p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#work">Browse the work</a>
+          <a class="btn btn-ghost" href="#contact">Talk about your project</a>
+        </div>
+        <ul class="hero-facts" aria-label="At a glance">
+          <li><b id="factProjects">30</b> websites</li>
+          <li><b id="factIndustries">7</b> industries</li>
+          <li><b>EN + AR</b> right-to-left ready</li>
+        </ul>
+      </div>
+      <div class="wall" id="wall" aria-label="Preview of featured projects"></div>
+    </div>
+  </section>
+
+  <section class="section" id="work" aria-labelledby="workTitle">
+    <div class="wrap">
+      <div class="section-head">
+        <h2 id="workTitle">The work</h2>
+        <p>Pick your industry to see similar projects. Hover a preview to scroll through the page, or open it to see every section.</p>
+      </div>
+      <div class="filters">
+        <ul class="filter-list" id="filters" aria-label="Filter projects by industry"></ul>
+      </div>
+      <p class="result-line" id="resultLine" aria-live="polite"></p>
+      <div class="grid" id="grid"></div>
+    </div>
+  </section>
+
+  <section class="section" id="services" aria-labelledby="servicesTitle">
+    <div class="wrap">
+      <div class="section-head">
+        <h2 id="servicesTitle">What I can build for you</h2>
+        <p>Every site is responsive, quick to load and ready for Arabic, English or both from day one.</p>
+      </div>
+      <div class="services-grid">
+        <div class="service">
+          <h3>Restaurant &amp; café websites</h3>
+          <p>Photo menus, table reservations, online ordering and WhatsApp contact for restaurants, bakeries and caterers.</p>
+          <button class="link-btn" type="button" data-jump="food">See restaurant projects</button>
+        </div>
+        <div class="service">
+          <h3>Online stores</h3>
+          <p>Product catalogues, cart and checkout, wishlists, offers and vendor accounts that make buying simple.</p>
+          <button class="link-btn" type="button" data-jump="stores">See online stores</button>
+        </div>
+        <div class="service">
+          <h3>Company websites</h3>
+          <p>Corporate and industrial sites that present your services, projects, certificates and team with confidence.</p>
+          <button class="link-btn" type="button" data-jump="business">See company websites</button>
+        </div>
+        <div class="service">
+          <h3>Dashboards &amp; web apps</h3>
+          <p>Admin panels, booking systems and SaaS marketing sites, backed by solid backend work in Laravel and NestJS.</p>
+          <button class="link-btn" type="button" data-jump="apps">See web apps</button>
+        </div>
+      </div>
+
+      <ol class="steps" aria-label="How we work together">
+        <li><b>Brief</b><span>We agree on goals, pages, content and timeline in one short call.</span></li>
+        <li><b>Design</b><span>You see and approve the look of the key pages before development starts.</span></li>
+        <li><b>Build</b><span>I develop the site, responsive and bilingual where needed, and share progress as I go.</span></li>
+        <li><b>Launch</b><span>I set up your domain and hosting, test everything and hand the site over to you.</span></li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="contact" id="contact" aria-labelledby="contactTitle">
+    <div class="wrap">
+      <h2 id="contactTitle">Have a project in mind?</h2>
+      <p>Tell me about your business and what you need. I'll get back to you with a few questions, a timeline and a quote.</p>
+      <div class="contact-email">
+        <a href="mailto:amrtarekaleraki@gmail.com" id="emailLink">amrtarekaleraki@gmail.com</a>
+        <button class="copy-btn" type="button" id="copyEmail">Copy email</button>
+      </div>
+      <div class="contact-links">
+        <a href="https://wa.me/201001543495" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2c-1.5 0-3-.4-4.3-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.2-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.9 11.9 0 0 0 4.6 4c1.7.7 2.4.8 3.2.6.5-.1 1.5-.6 1.8-1.2.2-.6.2-1.1.1-1.2l-.4-.3z"/></svg>
+          WhatsApp <small>+20 100 154 3495</small>
+        </a>
+        <a href="https://www.linkedin.com/in/amr-aleraki" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9.5h4V21H3zM9.5 9.5h3.8v1.6h.1c.5-1 1.8-2 3.8-2 4 0 4.8 2.6 4.8 6V21h-4v-5.1c0-1.2 0-2.8-1.7-2.8s-2 1.3-2 2.7V21h-4z"/></svg>
+          LinkedIn
+        </a>
+        <a href="https://github.com/amrtarekaleraki" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-3.2 19.5c.5.1.7-.2.7-.5v-1.7c-2.8.6-3.4-1.3-3.4-1.3-.4-1.2-1.1-1.5-1.1-1.5-.9-.6.1-.6.1-.6 1 .1 1.5 1 1.5 1 .9 1.6 2.4 1.1 3 .9.1-.7.4-1.1.6-1.4-2.2-.3-4.6-1.1-4.6-5 0-1.1.4-2 1-2.7-.1-.3-.4-1.3.1-2.7 0 0 .8-.3 2.8 1a9.6 9.6 0 0 1 5 0c1.9-1.3 2.8-1 2.8-1 .5 1.4.2 2.4.1 2.7.6.7 1 1.6 1 2.7 0 3.9-2.3 4.7-4.6 5 .4.3.7.9.7 1.9V21c0 .3.2.6.7.5A10 10 0 0 0 12 2z"/></svg>
+          GitHub
+        </a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <span>© <span id="year">2026</span> Amr Aleraki</span>
+    <a href="#top">Back to top</a>
+  </div>
+</footer>
+
+<dialog class="dialog" id="projectDialog" aria-labelledby="dlgTitle">
+  <div class="dialog-head">
+    <div class="crumb"><span class="dot" id="dlgDot"></span><span id="dlgCat"></span></div>
+    <div class="dialog-nav">
+      <button class="icon-btn" type="button" id="dlgPrev" aria-label="Previous project">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 18l-6-6 6-6"/></svg>
+      </button>
+      <button class="icon-btn" type="button" id="dlgNext" aria-label="Next project">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 18l6-6-6-6"/></svg>
+      </button>
+      <button class="icon-btn" type="button" id="dlgClose" aria-label="Close project" autofocus>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M18 6L6 18M6 6l12 12"/></svg>
+      </button>
+    </div>
+  </div>
+  <div class="dialog-body">
+    <div class="viewer">
+      <div class="viewer-tabs" role="group" aria-label="Preview mode">
+        <button class="chip" type="button" data-view="sections" aria-pressed="true">Sections</button>
+        <button class="chip" type="button" data-view="full" aria-pressed="false">Full page</button>
+      </div>
+      <div id="viewSections">
+        <div class="stage">
+          <img id="stageImg" alt="">
+          <button class="stage-btn prev" type="button" id="shotPrev" aria-label="Previous section">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 18l-6-6 6-6"/></svg>
+          </button>
+          <button class="stage-btn next" type="button" id="shotNext" aria-label="Next section">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 18l6-6-6-6"/></svg>
+          </button>
+          <span class="stage-count" id="stageCount"></span>
+        </div>
+        <div class="thumbs" id="thumbs" style="margin-top:12px"></div>
+      </div>
+      <div class="fullpage" id="viewFull" hidden>
+        <img id="fullImg" alt="" loading="lazy">
+      </div>
+    </div>
+    <div class="info">
+      <div>
+        <h2 id="dlgTitle"></h2>
+        <p class="kind" id="dlgKind"></p>
+      </div>
+      <p class="desc" id="dlgDesc"></p>
+      <div>
+        <h3>Highlights</h3>
+        <ul id="dlgHighlights"></ul>
+      </div>
+      <dl class="details" id="dlgDetails"></dl>
+      <div class="info-actions" id="dlgActions"></div>
+    </div>
+  </div>
+</dialog>
+
+<div class="toast" id="toast" role="status"></div>
+
+<script src="js/images.js"></script>
+<script src="js/projects.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
