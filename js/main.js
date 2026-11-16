@@ -346,9 +346,69 @@
     } else fallback();
   });
 
+  /* ---------------- Filter bar: drag, arrows, edge fades (desktop) ---------------- */
+  function enableFilterScroll() {
+    const list = $("#filters");
+    const bar = list.parentElement;
+    const mk = (cls, label, path) => {
+      const b = document.createElement("button");
+      b.type = "button";
+      b.className = `filter-arrow ${cls}`;
+      b.setAttribute("aria-label", label);
+      b.innerHTML = `<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="${path}"/></svg>`;
+      bar.appendChild(b);
+      return b;
+    };
+    const prev = mk("prev", "Scroll filters left", "M15 18l-6-6 6-6");
+    const next = mk("next", "Scroll filters right", "M9 18l6-6-6-6");
+    const step = () => Math.max(160, list.clientWidth * 0.6);
+    prev.addEventListener("click", () => list.scrollBy({ left: -step(), behavior: "smooth" }));
+    next.addEventListener("click", () => list.scrollBy({ left: step(), behavior: "smooth" }));
+
+    const update = () => {
+      const max = list.scrollWidth - list.clientWidth;
+      const canScroll = max > 2;
+      list.classList.toggle("can-scroll", canScroll);
+      list.classList.toggle("fade-start", canScroll && list.scrollLeft > 2);
+      list.classList.toggle("fade-end", canScroll && list.scrollLeft < max - 2);
+      prev.hidden = !(canScroll && list.scrollLeft > 2);
+      next.hidden = !(canScroll && list.scrollLeft < max - 2);
+    };
+    list.addEventListener("scroll", update, { passive: true });
+    window.addEventListener("resize", update);
+    update();
+
+    // Click and drag with the mouse (touch already scrolls natively)
+    let down = false, moved = false, startX = 0, startLeft = 0, suppressClick = false;
+    list.addEventListener("pointerdown", (e) => {
+      if (e.pointerType !== "mouse" || e.button !== 0 || !list.classList.contains("can-scroll")) return;
+      down = true; moved = false; startX = e.clientX; startLeft = list.scrollLeft;
+    });
+    window.addEventListener("pointermove", (e) => {
+      if (!down) return;
+      const dx = e.clientX - startX;
+      if (!moved && Math.abs(dx) > 5) { moved = true; list.classList.add("is-dragging"); }
+      if (moved) { list.scrollLeft = startLeft - dx; e.preventDefault(); }
+    });
+    window.addEventListener("pointerup", () => {
+      if (!down) return;
+      down = false;
+      if (moved) {
+        list.classList.remove("is-dragging");
+        suppressClick = true;
+        setTimeout(() => { suppressClick = false; }, 0);
+      }
+    });
+    list.addEventListener("click", (e) => {
+      if (suppressClick) { e.preventDefault(); e.stopPropagation(); }
+    }, true);
+    list.addEventListener("dragstart", (e) => e.preventDefault());
+  }
+
   /* ---------------- Init ---------------- */
   buildWall();
   buildFilters();
+  enableFilterScroll();
   buildGrid();
   setFilter("all");
   fromHash();

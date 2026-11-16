@@ -180,6 +180,23 @@ const PROJECTS = [
     ]
   },
   {
+    slug: "balora",
+    name: "BALORA",
+    category: "business",
+    kind: "Aluminium & glass engineering",
+    featured: true,
+    lang: "English + Arabic",
+    url: "https://baloracompany.com",
+    summary: "An aluminium and glass company site that sells engineering, not just products.",
+    description:
+      "Website for BALORA, an engineering-led aluminium and glass company in the UAE. A dark, gold-accented hero introduces the company, then the site speaks to each audience (developers, contractors, architects and owners), lays out eight solution areas, and backs them with real site photography, industries served, engineering capabilities and a seven-step process from consultation to handover.",
+    highlights: [
+      "Eight solution cards, from curtain walls to skylights and custom systems",
+      "Project gallery and close-up detail shots from real sites",
+      "Seven-step process and Request a Quote / WhatsApp contact paths"
+    ]
+  },
+  {
     slug: "avc-doha",
     name: "Advanced Veterinary Center",
     category: "health",
